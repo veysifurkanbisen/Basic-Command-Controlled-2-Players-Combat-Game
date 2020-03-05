@@ -30,8 +30,7 @@ def restart(firstHeroAsk, secondheroask):  # This is the function decides which 
         # Prints the begining health bar.
         attackstart(firstHeroAsk, secondheroask, result, hp1, hp2, firstHeroAsk, secondheroask)  # Calls the attackstart function.
     elif result == secondheroask:  # The condition for cointoss result equals to secondhero's name.
-        print secondheroask, (61 - len(secondheroask)) * " " + firstHeroAsk, "\n", "HP[" + str(hp2) + "]:", str(
-            hp2 / 2 * "|"), 1 * " ", "HP[" + str(hp1) + "]:", str(hp1 / 2 * "|")
+        print secondheroask, (61 - len(secondheroask)) * " " + firstHeroAsk, "\n", "HP[" + str(hp2) + "]:", str(hp2 / 2 * "|"), 1 * " ", "HP[" + str(hp1) + "]:", str(hp1 / 2 * "|")
         # prints the begining health bar.
         attackstart(secondheroask, firstHeroAsk, result, hp1, hp2, firstHeroAsk, secondheroask)  # Calls the attackstart function.
 
@@ -55,8 +54,7 @@ def attackstart(attackhero_1, attackhero_2, result, hp1, hp2, firstheroask, seco
                     attack(attackhero_1, attackhero_2, result, hp1, hp2, choosendamage, firstheroask, secondheroask)  # Calls the attack function.
                 elif 100 - choosendamage >= dealdamage:  # The possibility of making the shoot.
                     print attackhero_1, "hits", choosendamage, "damage!!"  # Informs the user that their attack is succesfull and shoots with the choosen damage.
-                    attack(attackhero_1, attackhero_2, result, hp1, hp2, choosendamage, firstheroask,
-                           secondheroask)  # Calls the attack function.
+                    attack(attackhero_1, attackhero_2, result, hp1, hp2, choosendamage, firstheroask, secondheroask)  # Calls the attack function.
 
         elif result == attackhero_2:  # The first hero's turn to attack according to coin toss result.
             print attackline
